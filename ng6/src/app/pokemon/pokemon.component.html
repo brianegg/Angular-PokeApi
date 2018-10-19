@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>Pokemon!</h1>
+
+	<ul *ngIf="ready" [@listStagger]="pokemons">
+		<li *ngFor="let pokemon of pokemons.results | slice:0:151; let i = index">
+			<a routerLink="/pokedetails/{{pokemon.name}}">{{i+1}}. {{pokemon.name}}</a>
+		</li>
+	</ul>
+</div>
+
+
